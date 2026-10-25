@@ -9,9 +9,10 @@
   --muted: #555A56;
   --border: #D3D6D0;
   --border-strong: #7A807B;
-  --primary: #1F5A2E;
+  /* verde e dourado do EloCampo original; o dourado claro é escurecido para 4.5:1 */
+  --primary: #2F6433;
   --on-primary: #FFFFFF;
-  --accent: #985A00;
+  --accent: #876118;
   /* contraste ≥ 4.5:1 sobre bg, head e row-alt */
   --danger: #B42318;
   --success: #1E6B35;
@@ -34,9 +35,9 @@
   --muted: #A7ADA8;
   --border: #30362F;
   --border-strong: #6E766F;
-  --primary: #86CC95;
+  --primary: #6DBF74;
   --on-primary: #101211;
-  --accent: #E8AC4C;
+  --accent: #E8B84B;
   --danger: #FF8A7A;
   --success: #7DD394;
   --warning: #F0B54E;
@@ -53,9 +54,9 @@
     --muted: #A7ADA8;
     --border: #30362F;
     --border-strong: #6E766F;
-    --primary: #86CC95;
+    --primary: #6DBF74;
     --on-primary: #101211;
-    --accent: #E8AC4C;
+    --accent: #E8B84B;
     --danger: #FF8A7A;
     --success: #7DD394;
     --warning: #F0B54E;
