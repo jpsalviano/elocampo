@@ -1,0 +1,17 @@
+# IDEs
+.idea/
+.vscode/
+*.iml
+
+# API (Gradle)
+api/.gradle/
+api/build/
+
+# Web and mobile (npm)
+node_modules/
+web/dist/
+mobile/.expo/
+mobile/dist/
+
+.env
+.env.*

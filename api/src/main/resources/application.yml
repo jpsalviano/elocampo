@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: elocampo-api
+  # Sem o usuário padrão do Spring Security (e a senha que ele gera e loga):
+  # a autenticação é só pelo token.
+  autoconfigure:
+    exclude: org.springframework.boot.security.autoconfigure.UserDetailsServiceAutoConfiguration
+  mongodb:
+    uri: ${ELOCAMPO_MONGODB_URI:mongodb://127.0.0.1:27017/elocampo}
+  data:
+    mongodb:
+      auto-index-creation: true
+    web:
+      pageable:
+        max-page-size: 100
+  servlet:
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 3MB
+  jackson:
+    default-property-inclusion: non_null
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api/v1/elocampo
+  # Nunca mandar stack traces nem mensagens de exceção montadas pelo Spring.
+  error:
+    include-message: never
+    include-stacktrace: never
+    include-binding-errors: never
+    whitelabel:
+      enabled: false
+
+elocampo:
+  # Chave HS256 dos tokens de acesso, com pelo menos 32 bytes. Obrigatória.
+  jwt-secret: ${ELOCAMPO_JWT_SECRET:}
+  token-hours: 12
+  files-root: ${ELOCAMPO_FILES_ROOT:/data/files}
+  # Contas e dados de exemplo, zerados todo dia; desligado sem senha.
+  demo-password: ${ELOCAMPO_DEMO_PASSWORD:}
+  demo-reset-cron: "0 0 4 * * *"
+  demo-zone: America/Sao_Paulo
